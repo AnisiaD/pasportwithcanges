@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Паспорт</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+        .passport {
+            border: 1px solid #000;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        button {
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="passport" id="page1">
+    <h2>Страница 1</h2>
+    <p>Фамилия: <span id="lastName1">Андреева</span></p>
+    <p>Имя: <span id="firstName1">Анисия</span></p>
+    <p>Отчество: <span id="middleName1">Машина</span></p>
+    <p>Год рождения: <span id="birthYear1">2005</span></p>
+    <button onclick="changeInfo('lastName1', 'Фомина')">Изменить Фамилию</button>
+    <button onclick="changeInfo('firstName1', 'Виктория')">Изменить Имя</button>
+    <button onclick="changeInfo('middleName1', 'Антонова')">Изменить Отчество</button>
+    <button onclick="changeInfo('birthYear1', '2000')">Изменить Год рождения</button>
+</div>
+<div class="passport" id="page2">
+    <h2>Страница 2</h2>
+    <p>Фамилия: <span id="lastName2">Андреева</span></p>
+    <p>Имя: <span id="firstName2">Анисия</span></p>
+    <p>Отчество: <span id="middleName2">Машина</span></p>
+    <p>Год рождения: <span id="birthYear2">2005</span></p>
+    <button onclick="changeInfo('lastName2', 'Фомина')">Изменить Фамилию</button>
+    <button onclick="changeInfo('firstName2', 'Виктория')">Изменить Имя</button>
+    <button onclick="changeInfo('middleName2', 'Антонова')">Изменить Отчество</button>
+    <button onclick="changeInfo('birthYear2', '2000')">Изменить Год рождения</button>
+</div>
+<script>
+function changeInfo(id, newValue) {
+    document.getElementById(id).innerText = newValue;
+}
+</script>
+<img src="./Снимок-06.11.2024-в-09.20.png" width="600">
+</body>
+</html>
